@@ -45,7 +45,7 @@ export default function RepositoryInputPage() {
                     placeholder="https://github.com/username/repository"
                     className="w-full bg-white/80 backdrop-blur-sm border-gray-300 focus:border-blue-500"
                   />
-                  <p className="text-xs text-gray-500">Example: github.com/vercel/next.js</p>
+                  <p className="text-xs text-gray-500 pb-5">Example: github.com/vercel/next.js</p>
                 </div>
 
                 <Link href="/dashboard/analysis">
