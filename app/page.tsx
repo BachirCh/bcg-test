@@ -3,18 +3,23 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import CodeSightLogo from "@/components/codesight-logo"
 
 export default function RepositoryInputPage() {
   return (
     <Layout>
       <div className="max-w-2xl mx-auto mt-12">
         <div className="bg-white dark:bg-[#0F0F12] rounded-xl p-8 border border-gray-200 dark:border-[#1F1F23] shadow-sm">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-            CodeSight - GitHub Repository Analysis
-          </h1>
+          <div className="flex items-center gap-3 mb-4">
+            <CodeSightLogo size="lg" showText={false} />
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">CodeSight</h1>
+              <p className="text-sm text-gray-600 dark:text-gray-400">GitHub Repository Analysis</p>
+            </div>
+          </div>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            CodeSight analyzes public GitHub repositories to provide comprehensive insights on code quality,
-            contribution patterns, and overall repository health.
+            Analyze public GitHub repositories to provide comprehensive insights on code quality, contribution patterns,
+            and overall repository health.
           </p>
 
           <div className="space-y-6">
