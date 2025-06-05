@@ -4,28 +4,28 @@ import { Award, Info } from "lucide-react"
 export default function CodeScoreCard() {
   const score = 82
   const getScoreColor = (score: number) => {
-    if (score >= 80) return "text-green-500 dark:text-green-400"
-    if (score >= 60) return "text-amber-500 dark:text-amber-400"
-    return "text-red-500 dark:text-red-400"
+    if (score >= 80) return "text-green-500"
+    if (score >= 60) return "text-amber-500"
+    return "text-red-500"
   }
 
   const getScoreBgColor = (score: number) => {
-    if (score >= 80) return "bg-green-100 dark:bg-green-900/30"
-    if (score >= 60) return "bg-amber-100 dark:bg-amber-900/30"
-    return "bg-red-100 dark:bg-red-900/30"
+    if (score >= 80) return "bg-green-100"
+    if (score >= 60) return "bg-amber-100"
+    return "bg-red-100"
   }
 
   const getScoreBorderColor = (score: number) => {
-    if (score >= 80) return "border-green-200 dark:border-green-800"
-    if (score >= 60) return "border-amber-200 dark:border-amber-800"
-    return "border-red-200 dark:border-red-800"
+    if (score >= 80) return "border-green-200"
+    if (score >= 60) return "border-amber-200"
+    return "border-red-200"
   }
 
   return (
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Award className="h-5 w-5 text-gray-600 dark:text-gray-300" />
+          <Award className="h-5 w-5 text-gray-600" />
           Code Score
         </CardTitle>
         <CardDescription>Overall quality assessment</CardDescription>
@@ -33,7 +33,7 @@ export default function CodeScoreCard() {
       <CardContent className="flex flex-col items-center">
         <div className="relative w-48 h-48 mb-6">
           {/* Circular progress background */}
-          <div className="absolute inset-0 rounded-full border-8 border-gray-100 dark:border-gray-800"></div>
+          <div className="absolute inset-0 rounded-full border-8 border-gray-100"></div>
 
           {/* Circular progress indicator */}
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
@@ -54,7 +54,7 @@ export default function CodeScoreCard() {
           {/* Score display */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             <span className={`text-4xl font-bold ${getScoreColor(score)}`}>{score}</span>
-            <span className="text-sm text-gray-500 dark:text-gray-400">out of 100</span>
+            <span className="text-sm text-gray-500">out of 100</span>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ export default function CodeScoreCard() {
           <h4 className={`text-sm font-medium mb-1 ${getScoreColor(score)}`}>
             {score >= 80 ? "Excellent" : score >= 60 ? "Good" : "Needs Improvement"}
           </h4>
-          <p className="text-xs text-gray-600 dark:text-gray-400">
+          <p className="text-xs text-gray-600">
             {score >= 80
               ? "This codebase follows best practices with minimal issues."
               : score >= 60
@@ -72,30 +72,30 @@ export default function CodeScoreCard() {
         </div>
 
         <div className="mt-6 space-y-3 w-full">
-          <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300">Score Breakdown</h4>
+          <h4 className="text-sm font-medium text-gray-700">Score Breakdown</h4>
 
           <div className="flex items-center justify-between">
-            <span className="text-xs text-gray-600 dark:text-gray-400">Code Structure</span>
-            <span className="text-xs font-medium text-gray-900 dark:text-white">86/100</span>
+            <span className="text-xs text-gray-600">Code Structure</span>
+            <span className="text-xs font-medium text-gray-900">86/100</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-xs text-gray-600 dark:text-gray-400">Documentation</span>
-            <span className="text-xs font-medium text-gray-900 dark:text-white">78/100</span>
+            <span className="text-xs text-gray-600">Documentation</span>
+            <span className="text-xs font-medium text-gray-900">78/100</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-xs text-gray-600 dark:text-gray-400">Test Coverage</span>
-            <span className="text-xs font-medium text-gray-900 dark:text-white">84/100</span>
+            <span className="text-xs text-gray-600">Test Coverage</span>
+            <span className="text-xs font-medium text-gray-900">84/100</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-xs text-gray-600 dark:text-gray-400">Code Complexity</span>
-            <span className="text-xs font-medium text-gray-900 dark:text-white">79/100</span>
+            <span className="text-xs text-gray-600">Code Complexity</span>
+            <span className="text-xs font-medium text-gray-900">79/100</span>
           </div>
         </div>
 
-        <div className="mt-6 flex items-start gap-2 text-xs text-gray-500 dark:text-gray-400 w-full">
+        <div className="mt-6 flex items-start gap-2 text-xs text-gray-500 w-full">
           <Info className="h-4 w-4 flex-shrink-0 mt-0.5" />
           <p>This score is calculated based on static analysis, test coverage, and adherence to coding standards.</p>
         </div>

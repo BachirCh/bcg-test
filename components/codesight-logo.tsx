@@ -22,24 +22,16 @@ export default function CodeSightLogo({ className = "", showText = true, size = 
   return (
     <div className={`flex items-center gap-2 ${className}`}>
       <div className="relative">
-        {/* Background circle with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"></div>
+        {/* Background circle with black */}
+        <div className="absolute inset-0 bg-black rounded-lg"></div>
 
         {/* Icon container */}
-        <div
-          className={`relative ${sizeClasses[size]} bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center`}
-        >
+        <div className={`relative ${sizeClasses[size]} bg-black rounded-lg flex items-center justify-center`}>
           <Code2 className="h-1/2 w-1/2 text-white" strokeWidth={2.5} />
         </div>
       </div>
 
-      {showText && (
-        <span
-          className={`font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ${textSizeClasses[size]}`}
-        >
-          CodeSight
-        </span>
-      )}
+      {showText && <span className={`font-bold text-black ${textSizeClasses[size]}`}>CodeSight</span>}
     </div>
   )
 }

@@ -52,31 +52,26 @@ export default function RepositoryKPIs() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {kpis.map((kpi, index) => (
-        <div
-          key={index}
-          className="bg-white dark:bg-[#0F0F12] rounded-xl p-4 border border-gray-200 dark:border-[#1F1F23]"
-        >
+        <div key={index} className="bg-white rounded-xl p-4 border border-gray-200">
           <div className="flex items-start justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-500 dark:text-gray-400">{kpi.title}</p>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-1">{kpi.value}</h3>
-              {kpi.secondaryValue && (
-                <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{kpi.secondaryValue}</p>
-              )}
+              <p className="text-sm font-medium text-gray-500">{kpi.title}</p>
+              <h3 className="text-xl font-bold text-gray-900 mt-1">{kpi.value}</h3>
+              {kpi.secondaryValue && <p className="text-sm font-medium text-gray-700">{kpi.secondaryValue}</p>}
               <p
                 className={`text-xs mt-1 ${
                   kpi.changeType === "positive"
-                    ? "text-green-600 dark:text-green-400"
+                    ? "text-green-600"
                     : kpi.changeType === "negative"
-                      ? "text-red-600 dark:text-red-400"
-                      : "text-gray-500 dark:text-gray-400"
+                      ? "text-red-600"
+                      : "text-gray-500"
                 }`}
               >
                 {kpi.change}
               </p>
             </div>
-            <div className="p-2 bg-gray-100 dark:bg-[#1F1F23] rounded-lg">
-              <kpi.icon className="h-5 w-5 text-gray-600 dark:text-gray-300" />
+            <div className="p-2 bg-gray-100 rounded-lg">
+              <kpi.icon className="h-5 w-5 text-gray-600" />
             </div>
           </div>
         </div>
