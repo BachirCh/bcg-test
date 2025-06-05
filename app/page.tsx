@@ -9,10 +9,12 @@ export default function RepositoryInputPage() {
     <Layout>
       <div className="max-w-2xl mx-auto mt-12">
         <div className="bg-white dark:bg-[#0F0F12] rounded-xl p-8 border border-gray-200 dark:border-[#1F1F23] shadow-sm">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">GitHub Repository Analysis</h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            CodeSight - GitHub Repository Analysis
+          </h1>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Enter the URL of a public GitHub repository to analyze its codebase. We'll provide insights on code quality,
-            contribution patterns, and overall health.
+            CodeSight analyzes public GitHub repositories to provide comprehensive insights on code quality,
+            contribution patterns, and overall repository health.
           </p>
 
           <div className="space-y-6">

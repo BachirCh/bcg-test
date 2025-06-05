@@ -1,3 +1,4 @@
+import type React from "react"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -5,9 +6,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "KokonutUI Dashboard",
-  description: "A modern dashboard with theme switching",
-    generator: 'v0.dev'
+  title: "CodeSight Dashboard",
+  description: "A modern GitHub repository analysis dashboard",
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
